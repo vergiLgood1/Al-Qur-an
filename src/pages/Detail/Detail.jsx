@@ -29,7 +29,7 @@ function Detail() {
                     <TypeSurah title={data?.tempatTurun} />
                 </div>
 
-                <p className='text-white mt-5 text-justify px-4 pb-5'>
+                <p className='text-gray-900 mt-5 text-justify px-4 pb-5'>
                     {data.deskripsi ? data.deskripsi.replace(/<\/?[^>]+(>|$)/g, "") : ''}
                 </p>
 
@@ -46,19 +46,19 @@ function Detail() {
                     {data.suratSebelumnya &&
                         <button
                             onClick={() => navigate(`/surah/${data.suratSebelumnya.nomor}`)}
-                            className="w-28 md:w-56 h-11 flex justify-center items-center text-lg rounded-xl border-2 border-purple-600 text-center mb-3 text-white transition duration-200 hover:border-purple-100 active:bg-red-700/5">
+                            className="w-28 md:w-56 h-11 flex justify-center items-center text-lg rounded-xl border-2 border-purple-600 text-center mb-3 text-gray-900 transition duration-200 hover:border-purple-100 active:bg-red-700/5">
                             <FiArrowLeft />
                         </button>
                     }
 
-                    <Link to='/' className="w-28 md:w-56 flex justify-center items-center text-lg rounded-xl border-2 border-purple-600 text-center mb-3 text-white transition duration-200 hover:border-purple-100 active:bg-red-700/5">
+                    <Link to='/' className="w-28 md:w-56 flex justify-center items-center text-lg rounded-xl border-2 border-purple-600 text-center mb-3 text-gray-900 transition duration-200 hover:border-purple-100 active:bg-red-700/5">
                         <FiHome />
                     </Link>
 
                     {data.suratSelanjutnya &&
                         <button
                             onClick={() => navigate(`/surah/${data.suratSelanjutnya.nomor}`)}
-                            className="w-28 md:w-56 h-11 flex justify-center items-center text-lg rounded-xl border-2 border-purple-600 text-center mb-3 text-white transition duration-200 hover:border-purple-100 active:bg-red-700/5">
+                            className="w-28 md:w-56 h-11 flex justify-center items-center text-lg rounded-xl border-2 border-purple-600 text-center mb-3 text-gray-900 transition duration-200 hover:border-purple-100 active:bg-red-700/5">
                             <FiArrowRight />
                         </button>
                     }
