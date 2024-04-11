@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import Navbar from '../../component/Navbar'
+import Hero from '../../component/HeroSection'
 import CardHomePage from '../../component/CardHomePage'
 import useFetch from '../../hooks/useFetch'
 import Footer from '../../component/Footer';
+
 
 function Home() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -16,27 +18,32 @@ function Home() {
     }, [searchTerm, data])
 
     return (
-        <>
+        <>  
+            
             <Navbar />
-            <div className='grid grid-cols-1'>
-                <div className='w-[90%] mt-[50px] mx-auto relative'>
-                    <input type="text" id="search" onChange={e => setSearchTerm(e.target.value)} className="block w-full p-2 pl-8 text-sm border rounded-lg bg-gray-200 border-gray-300 placeholder-gray-900 text-gray-900 focus:ring-blue-500 focus:border-blue-500" placeholder="Search..." />
-                    <svg className="w-4 h-4 text-gray-900 absolute left-3 top-1/2 transform -translate-y-1/2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                    </svg>
+            <Hero/>
+            <div className='grid grid-cols-1 bg-red-400'>
+                <div className='w-[60%] mt-[50px] mx-auto relative'>
+                    <label className="input input-bordered flex items-center gap-2">
+                        <input id="search" type="text" className="grow" placeholder="Mau baca surah apa hari ini?" onChange={e => setSearchTerm(e.target.value)} />
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg>
+                    </label>
+                    <div className=''>
+
+                    </div>
                 </div>
-                <div className="container grid lg:grid-cols-3 md:grid-cols-1 gap-4 w-[90%] mt-[50px] mx-auto pb-6">
-                    {searchResults.length > 0 ? searchResults?.map((item) => (
-                        <CardHomePage
-                            key={item.nomor}
-                            number={item.nomor}
-                            name={item.namaLatin}
-                            ayat={item.nama}
-                            type={item.tempatTurun}
-                            total={item.jumlahAyat}
-                        />
-                    )) : <p className="text-gray-900 text-center">No results found.</p>}
-                </div>
+            </div>
+            <div className="container grid lg:grid-cols-3 md:grid-cols-1 gap-4 w-[90%] mt-[50px] mx-auto pb-6">
+                {searchResults.length > 0 ? searchResults?.map((item) => (
+                    <CardHomePage
+                        key={item.nomor}
+                        number={item.nomor}
+                        name={item.namaLatin}
+                        ayat={item.nama}
+                        type={item.tempatTurun}
+                        total={item.jumlahAyat}
+                    />
+                )) : <p className="text-gray-900 text-center">No results found.</p>}
             </div>
             <Footer />
         </>

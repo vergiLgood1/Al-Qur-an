@@ -4,30 +4,55 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #888;
-    border-radius: 5px;
+  background: #888;
+  border-radius: 5px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #000;
-    border-radius: 5px;
+  background: #000;
+  border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  background: #555;
 }
 
-body {
-    background-color: #F5F5F5;
+/* body {
+  background-color: var(--body-background);
+} */
+
+@layer base {
+    
+    :root {
+      --body-background: #dedede;
+      --body-background-secondary-dark: #22343c;
+      --body-text-color: #22343c;
+      --body-text-color-dark: #dedede;
+      --body-background-dark: #30444e;
+      --body-background-secondary-light: #ffffff;
+      --link-color-primary: #0062ff;
+      --link-color-secondary: hsl(174, 97%, 43%);
+      --link-color-secondary-dark: hsl(174, 97%, 25%);
+    }
+    
+    [data-theme="dark"] {
+        --body-background: var(--body-background-dark);
+        --card-background: var(--body-background-secondary-dark);
+        --text-color: var(--body-text-color-dark);
+        --link-color: var(--link-color-secondary);
+    }
+
 }
+
+
 
 .font-arab {
-    font-family: arab, sans-serif;
+  font-family: arab, sans-serif;
 }
