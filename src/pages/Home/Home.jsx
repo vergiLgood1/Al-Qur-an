@@ -18,10 +18,10 @@ function Home() {
     }, [searchTerm, data])
 
     return (
-        <>  
-            
+        <>
+
             <Navbar />
-            <Hero/>
+            <Hero />
             <div className='grid grid-cols-1 bg-red-400'>
                 <div className='w-[60%] mt-[50px] mx-auto relative'>
                     <label className="input input-bordered flex items-center gap-2">
@@ -39,6 +39,7 @@ function Home() {
                         key={item.nomor}
                         number={item.nomor}
                         name={item.namaLatin}
+                        meaning={item.arti}
                         ayat={item.nama}
                         type={item.tempatTurun}
                         total={item.jumlahAyat}

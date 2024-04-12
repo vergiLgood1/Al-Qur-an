@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
-        <footer className="footer p-10 bg-base-200 text-base-content">
+        <footer className="footer p-10 bg-base-300 text-base-content">
             <aside>
             <img src='/logo.png' className='h-8' alt="al-qur'an-plus" />
             <p>HALAL Industries Ltd.<br />Providing reliable tech since 2024</p>

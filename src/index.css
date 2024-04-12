@@ -33,6 +33,7 @@
     :root {
       --body-background: #dedede;
       --body-background-secondary-dark: #22343c;
+      --body-text-color-primary: #a6adbd;
       --body-text-color: #22343c;
       --body-text-color-dark: #dedede;
       --body-background-dark: #30444e;
@@ -40,6 +41,8 @@
       --link-color-primary: #0062ff;
       --link-color-secondary: hsl(174, 97%, 43%);
       --link-color-secondary-dark: hsl(174, 97%, 25%);
+      
+
     }
     
     [data-theme="dark"] {

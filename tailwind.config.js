@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+const { color } = require('framer-motion');
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -9,23 +11,34 @@ module.exports = {
       backgroundColor: {
         skin:{
           bgDark: 'var(--body-background-dark)',
-          bgDarkSecondary: 'var(--body-background-secondary-dark)',
+          bgDark2: 'var(--body-background-secondary-dark)',
           bgLight: 'var(--body-background-light)',
-          bgLinkSecondary: 'var(--link-color-secondary)',
-          bgLinkSecondaryDark: 'var(--link-color-secondary-dark)'
+          bgLink: 'var(--link-color-primary)',
+          bgLink2: 'var(--link-color-secondary)',
+          
         }
       },
-      textColor: {
-        skin: {
-          textDark: 'var(--body-text-color-dark)',
-          textLight: 'var(--body-text-color-light)',
-          linkColorPimary: 'var(--link-color-primary)',
-          linkColorSecondary: 'var(--link-color-secondary)',
+        textColor: {
+          skin: {
+            tPrimary: 'var(--body-text-color-primary)',
+            tDark: 'var(--body-text-color-dark)',
+            tLight: 'var(--body-text-color-light)',
+            tlink: 'var(--link-color-primary)',
+            tlink2: 'var(--link-color-secondary)',
+          }
         }
-      }
+      
       
     },
   },
+
+  variants: {
+    extend: {
+      backgroundColor : ['active'],
+    
+    }
+  },
+
   plugins: [
     require('tailwind-scrollbar'),
     require("daisyui"),
