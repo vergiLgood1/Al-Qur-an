@@ -5,7 +5,8 @@ import Doa from "./pages/Doa/Doa";
 
 function App() {
   return (
-    <div className="App min-h-screen bg-[#f2f2f2]">
+    
+    <div className="App min-h-screen">
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />

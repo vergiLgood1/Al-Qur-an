@@ -26,6 +26,10 @@ module.exports = {
             tlink: 'var(--link-color-primary)',
             tlink2: 'var(--link-color-secondary)',
           }
+        },
+
+        backgroundImage: {
+          frameNumber: '/public/svg/FrameNumber.svg'
         }
       
       
